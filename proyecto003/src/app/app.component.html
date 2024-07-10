@@ -1,6 +1,16 @@
 <div style="text-align:center">
-
-<app-dado valor="0"></app-dado>
-<app-dado></app-dado>
-<app-dado></app-dado>
+  <hr>
+<app-dado valor="{{valor1}}"></app-dado>
+<app-dado valor="{{valor2}}"></app-dado>
+<app-dado valor="{{valor3}}"></app-dado>
+<hr>
+<!--property binding 
+<app-dado [numero]="valor1"></app-dado>
+<app-dado [numero]="valor2"></app-dado>
+<app-dado [numero]="valor3"></app-dado>
+-->
+<hr>
+<button (click)="tirar()">Tirar</button>
+<hr>
+<p>Resultado: {{resultado}}</p>
 </div>
