@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SelectornumericoComponent } from './selectornumerico/selectornumerico.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'proyecto005';
+
+  @ViewChild('selector2') selector2!: SelectornumericoComponent;  
+  
+  fijarSelector2(valor:number) {
+    this.selector2.fijar(valor);  //Accedo al metodo "fijar()" del componente hijo
+  }
 }
