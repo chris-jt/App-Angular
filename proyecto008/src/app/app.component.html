@@ -1,0 +1,16 @@
+<div *ngIf="personajes!=null; else espera">
+  <table border="1">
+    <tr>
+      <td>Foto</td><td>Nombre</td><td>Estado</td><td>Especie</td><td>Ubicacion</td>
+    </tr>
+    <tr *ngFor="let personaje of personajes.results">
+
+      <img src="{{personaje.image}}" alt=""> 
+       <td>{{personaje.name}}</td>
+       <td>{{personaje.status}}</td>
+       <td>{{personaje.species}}</td>
+       <td>{{personaje.location.name}}</td>
+      </tr>
+  </table>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>
